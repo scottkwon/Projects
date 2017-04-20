@@ -1,0 +1,57 @@
+
+#wrapper {
+    background-color: #16254B;
+    margin: 10px;
+    max.width : 980px;
+    PADDING: 5px;
+}
+
+
+#topbanner {
+    background-color: #C11A29;
+    border-radius: 20px;
+    padding: 10px;
+    color: #B6CCE7;
+    margin: 10px;
+}
+
+#sidebar {
+    background-color: #236A79;
+    color: #41B3B4;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 20px;
+    maring-top: 10px;
+    margin: 10px;
+    padding: 10px;
+    height: auto;
+    width: 250px;
+}
+
+#body {
+    color:#B6CCE7;
+    background-color:#0D1219;
+    border-radius:20px;
+    display: inline-block;
+    vertical-align: top ;
+    width: 70%;
+    margin: 10px;
+    padding: 20px;
+
+}
+
+#foot {
+    background-color:#4B5260;
+    border-radius:20px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.def {
+    color:#55D2DD;
+}
+
+.textcolor{
+    color:#4B34C2;
+}

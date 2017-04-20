@@ -1,0 +1,174 @@
+#header {
+  background: #F8F8F8;
+  color: black;
+  padding: 20px;
+  max-width: 1160px;
+}
+
+.goleft {
+  display: inline;
+  text-align: left;
+  margin-right: 50%;
+  font-family: "Comic-Sans";
+}
+
+.goright {
+  display: inline;
+  text-align: right;
+  font-family: "Arial";
+}
+
+#wrapper {
+  background: linear-gradient(45deg, #231318, #6F5964, #231318 );
+  max-width: 1200px;
+}
+
+#personalinfo{
+  padding: 30px;
+  max-height: 300px;
+}
+
+.myimg {
+  border: 5px solid gray;
+  display: inline-block;
+  vertical-align: top;
+  height: 290px;
+  width: 390px;
+  margin-left: 10px;
+}
+
+.aboutme {
+  background: #E9DFE8;
+  display:inline-block;
+  vertical-align: top;
+  height: 300px;
+  width: 667px;
+  margin-left: 30px;
+}
+
+.topblock {
+  background-color: #8F8D99 ;
+  color: #FFFEFD ;
+  min-height: 40px;
+  padding: 10px;
+  font-size: 25px;
+  font-family: arial;
+}
+
+.text {
+  font-family: arial;
+}
+
+.stext {
+  font-family: arial;
+  font-size: 16px;
+}
+
+#card {
+  display: inline-block;
+  vertical-align: top;
+  width: 325px;
+  height: 700px;
+  color: black;
+  background: #E9DFE8;
+  margin: 20px;
+  margin-left: 40px;
+}
+
+
+div#card .imgblock img {
+  width: 325px;
+
+}
+
+div.textinfo p {
+  width: 315px;
+  font-size: 15px;
+}
+
+.textblock {
+  padding: 12px;
+}
+
+
+#card .textinfo {
+  height: 175px;
+  width: 301px;
+  padding: 10px;
+
+}
+
+
+#images {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+div.#images .button p {
+  font: white;
+}
+
+div.tech img{
+  margin: 5px;
+  display: inline-block;
+  vertical-align: top;
+  width: 45px;
+  padding: 2px;
+  margin-bottom: 15px;
+}
+
+
+.stext {
+  font-size: 13px;
+}
+
+
+.button {
+  border-radius: 20px;
+  background: #407D61;
+  display: inline-block;
+  margin-left: 100px;
+  padding: 10px;
+  text-align: center
+  font
+}
+
+.tech {
+  height: 250px;
+  width: 350px;
+}
+
+
+#footer {
+  width: 1200px;
+  background: #F8F8F8;
+  ont-family: arial;
+}
+
+#footer p {
+  margin-top: 0px;
+  font-family: arial;
+  text-align: center;
+}
+
+#footer img {
+  width: 20px;
+  height: 20px;
+}
+
+#footer .social {
+  text-align: center;
+}
+
+.social .url {
+  font-family: arial;
+}
+
+.social {
+  font-family: arial;
+  font-size: 14px;
+}
+
+div.tech button {
+  font: white;
+}

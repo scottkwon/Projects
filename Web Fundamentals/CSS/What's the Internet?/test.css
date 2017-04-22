@@ -1,0 +1,119 @@
+* {
+  font-family: arial;
+}
+
+a{
+  color: #07B5D7;
+}
+
+h3 {
+  color: #2B6099;
+}
+
+span {
+  color: red;
+}
+
+#header {
+  width: 970px;
+}
+
+#header p {
+  font-size: 42px;
+  margin-bottom: 0px;
+  margin-left: 120px;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+#header img {
+  position: relative;
+  top:120px;
+  left: 20px;
+  height: 100px;
+  width: 100px;
+}
+
+#www {
+  background: #295B92;
+  color: white;
+  height: 70px;
+  font-size: 30px;
+  text-align: left;
+}
+
+#www p {
+  margin-left: 10px;
+  padding: 15px;
+  margin-top: 0px;
+}
+
+#wrapper {
+  width: 970px;
+  padding: 10px;
+}
+
+#sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+  float: left;
+}
+
+.button {
+  display: inline-block;
+  height: 30px;
+  width: 180px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin: 2px;
+  box-shadow: 1px 1px 1px black;
+  text-decoration: none;
+}
+
+#blue {
+  background: #2B6099;
+}
+
+#orange {
+  background: #E68320;
+
+#dojo{
+  height: 250px;
+}
+
+#contactus {
+  display: inline-block;
+  vertical-align: top;
+  width: 600px;
+  float: right;
+}
+
+#dns img {
+  height: 30px;
+  width: 30px;
+  ß
+}
+
+#tele {
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  text-align: left;
+}
+
+#maincontent {
+  display: inline-block;
+  vertical-align: top;
+  width: 500px;
+}
+
+#bigthree {
+  display: inline-block;
+  vertical-align: top;
+  width: 600px;
+}

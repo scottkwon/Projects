@@ -5,12 +5,14 @@
 a{
   color: #07B5D7;
 }
+
 h3 {
   color: #2B6099;
 }
 
 #wrapper {
   width: 970px;
+  height: 900px;
 }
 
 #header {
@@ -77,19 +79,49 @@ h3 {
 #sidebar a {
   padding: 5px;
   text-decoration: none;
+  shadow: 10px black;
 }
 span {
   color: red;
 }
 
-#ad {
+#content {
   display: inline-block;
   vertical-align: top;
-  background: url("ad_background.png");
-  height: 300px;
+  width: 700px;
+}
+
+#ad {
+  display: inline-block;
+  background-image: url(images/ad_background.png);
+  length: 300px;
+}
+
+#ad p {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#ad a {
+  display: inline-block;
+  height: 20px;
+  width: 120px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin: 1px;
+  background: #07B5D7;
+  margin-bottom: 20px;
+  margin-left: 30px;
 }
 
 #ad img{
+  position: relative;
+  bottom: 20px;
+  left: 60px;
   height: 100px;
   width: 70px;
 }
@@ -97,17 +129,21 @@ span {
 #contactus {
   display: inline-block;
   vertical-align: top;
-  height: 100px;
+  height: 120px;
   width: 700px;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 #DNS {
   display: inline-block;
-  vertical-align: top;
   margin-top: 30px;
+  margin-right: 332px;
 }
 
 #DNS img {
+  position: relative;
+  top: 15px;
   height: 30px;
   length: 30px;
   margin-left: 50px;
@@ -117,38 +153,45 @@ span {
   display: inline-block;
   vertical-align: top;
   text-align: right;
-  margin-left: 360px;
   padding-top: 0px;
+  font-size: 14px;
 
 }
 
 #tele img {
   position: relative;
-  top: 54px;
-  left: 120px;
+  top: 57px;
+  left: 80px;
   height: 50px;
   length: 50px;
 }
 
 #tele p {
   color: #07B5D7;
+  font-size: 18px;
 }
 
 #maincontent img {
   text-align: center;
   width: 300px;
-  margin-left: 250px;
+  margin-left: 200px;
 }
+
+
 #maincontent {
   display: inline-block;
   vertical-align: top;
   width: 700px;
+  margin-left: 20px;
+  border-top: 1px solid black;
 }
 
 
 #bigthree {
-  border: 4px solid #1D80DC;
+  border: 3px solid #006FD8;
+  border-bottom: 0;
   width: 700px;
+  margin-left: 20px;
 }
 
 #bigthree img {
@@ -163,6 +206,13 @@ span {
 #threeinfo {
   display: inline-block;
   vertical-align: top;
-  width: 700px;
+  font-size::14px;
+  width: 500px;
+}
 
+#threeinfo p {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  max-width:600px;
 }

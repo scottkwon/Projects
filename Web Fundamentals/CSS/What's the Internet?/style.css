@@ -1,0 +1,168 @@
+* {
+  font-family: arial;
+}
+
+a{
+  color: #07B5D7;
+}
+h3 {
+  color: #2B6099;
+}
+
+#wrapper {
+  width: 970px;
+}
+
+#header {
+  width: 970px;
+}
+
+#header p {
+  font-size: 42px;
+  margin-bottom: 0px;
+  margin-left: 120px;
+}
+
+#header a {
+  text-decoration: none;
+}
+
+#header img {
+  position: relative;
+  top:120px;
+  left: 20px;
+  height: 100px;
+  width: 100px;
+}
+
+#www {
+  background: #295B92;
+  color: white;
+  height: 70px;
+  font-size: 30px;
+  text-align: left;
+}
+
+#www p {
+  margin-left: 10px;
+  padding: 15px;
+  margin-top: 0px;
+}
+
+#sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.button {
+  display: inline-block;
+  height: 20px;
+  width: 180px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  margin: 1px;
+}
+
+#blue {
+  background: #2B6099;
+}
+
+#orange {
+  background: #E68320;
+}
+
+#sidebar a {
+  padding: 5px;
+  text-decoration: none;
+}
+span {
+  color: red;
+}
+
+#ad {
+  display: inline-block;
+  vertical-align: top;
+  background: url("ad_background.png");
+  height: 300px;
+}
+
+#ad img{
+  height: 100px;
+  width: 70px;
+}
+
+#contactus {
+  display: inline-block;
+  vertical-align: top;
+  height: 100px;
+  width: 700px;
+}
+
+#DNS {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30px;
+}
+
+#DNS img {
+  height: 30px;
+  length: 30px;
+  margin-left: 50px;
+}
+
+#tele {
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  margin-left: 360px;
+  padding-top: 0px;
+
+}
+
+#tele img {
+  position: relative;
+  top: 54px;
+  left: 120px;
+  height: 50px;
+  length: 50px;
+}
+
+#tele p {
+  color: #07B5D7;
+}
+
+#maincontent img {
+  text-align: center;
+  width: 300px;
+  margin-left: 250px;
+}
+#maincontent {
+  display: inline-block;
+  vertical-align: top;
+  width: 700px;
+}
+
+
+#bigthree {
+  border: 4px solid #1D80DC;
+  width: 700px;
+}
+
+#bigthree img {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 30px;
+  padding-left: 20px;
+  height: 100px;
+  width: 100px;
+}
+
+#threeinfo {
+  display: inline-block;
+  vertical-align: top;
+  width: 700px;
+
+}

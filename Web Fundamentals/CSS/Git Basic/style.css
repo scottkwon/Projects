@@ -1,0 +1,183 @@
+* {
+  font-family: verdana;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 12px;
+  color:white;
+}
+
+h3, h4 {
+  color: white;
+}
+
+
+#wrapper {
+  padding: 10px;
+  width: 970px;
+  background:#D5D8CA;
+}
+
+.ib {
+  display: inline-block;
+  vertical-align: top;
+/*   background: #123134;
+ */}
+
+#cat {
+  width: 25%;
+}
+
+#cat img {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: -15px;
+  background-color: #123134;
+}
+
+#git {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  width: 96%;
+  background: #30A39D;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+#git h2 {
+  display: inline;
+  vertical-align: top;
+}
+
+#navbar {
+  width: 65%;
+  margin-right: 10px;
+  text-align:right;
+}
+
+#navbar li {
+  display: inline;
+  vertical-align: top;
+
+}
+
+
+#navbar a {
+  color: white;
+  font-size: 14px;
+
+}
+
+#sidebar {
+  padding: 5px;
+  width: 24%;
+  background: #123134;
+  margin-right: 10px;
+  padding: 12px;
+}
+
+#sidebar p {
+  padding: 10px;
+}
+
+#content {
+  padding: 10px;
+  background: #F9E27F;
+  width: 97.9%;
+}
+
+#content strong {
+  color:#30A39D;
+}
+
+
+#main {
+  width: 65%;
+  height: 400px;
+  margin-left: 10px;
+}
+
+#row1 {
+  width: 100%;
+}
+
+#row2{
+  width: 100%;
+  margin: 10px;
+}
+
+#row3 {
+  width: 81%;
+  margin: 10px;
+}
+
+
+
+
+.threes {
+  display: inline-block;
+  vertical-align: top;
+  width: 150px;
+  height: 100px;
+  background: #123134;
+  margin: 10px;
+  margin-top: 0;
+  padding: 10px;
+}
+
+.threes p {
+  padding: 10px;
+  margin-top: 0;
+}
+
+
+#commit {
+  width: 40%;
+  background: #123134;
+  padding: 10px;
+  margin-right: 10px;
+
+}
+
+#commit p {
+  padding: 10px;
+}
+
+
+#remoteadd {
+  width: 40%;
+  background: #123134;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+#remoteadd p {
+  padding: 10px;
+}
+
+#push {
+  background: #123134;
+  width: 108%;
+  padding: 10px;
+
+}
+
+
+#footer {
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: top;
+  background: #30A39D;
+  width: 100%;
+  text-align: center;
+  height: 60px;
+}
+
+#footer p {
+  color: black;
+  padding: 20px;
+}

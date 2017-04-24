@@ -78,6 +78,7 @@ h3, h4 {
   background: #123134;
   margin-right: 10px;
   padding: 12px;
+  height: 390px;
 }
 
 #sidebar p {
@@ -88,6 +89,7 @@ h3, h4 {
   padding: 10px;
   background: #F9E27F;
   width: 97.9%;
+  height: 417px;
 }
 
 #content strong {
@@ -163,7 +165,10 @@ h3, h4 {
   background: #123134;
   width: 108%;
   padding: 10px;
+}
 
+#push p {
+  padding: 10px;
 }
 
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      "use strict";
+      function randomChance(token) {
+        var prize = 0;
+        for (var i = token;  i >= 0; i-- ) {
+          var chance = Math.floor(Math.random()*100);
+          if (chance == 1 ) {
+           prize = Math.floor((Math.random()*50) + 49);
+           console.log("YOU WIN!" + prize + " coins.");
+           return prize;
+          }
+        }
+      }
+      randomChance (1000);
+    </script>
+  </head>
+</html>

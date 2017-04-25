@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      "use strict";
+      function onlyNumbers(arr) {
+        var newArr =[];
+        for (var i = 0 ; i < arr.length ; i++) {
+          if (typeof arr[i] == "number") {
+            newArr.push(arr[i]);
+          } else {
+            continue;
+          }
+        }
+        return newArr;
+      }
+      onlyNumbers (["yas",2,3,"string",3]);
+    </script>
+  </head>
+</html>

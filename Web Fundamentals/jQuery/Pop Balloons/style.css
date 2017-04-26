@@ -1,0 +1,17 @@
+#wrapper {
+  width: 1000px;
+  length: 1000px;
+  margin: auto;
+}
+
+.balloons {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.button {
+  display: inline-block;
+  vertical-align: top;
+
+}
+}

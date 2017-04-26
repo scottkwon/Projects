@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fooling Around With jQuery.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+        $("button.clickme").click(function(){
+          alert("Button has been clicked!");
+        });
+        $("button.hide").click(function(){
+          $("img.hide").hide(600);
+        });
+        $("button.show").click(function(){
+          $("img.hide").show(800);
+        });
+        $("button.toggle").click(function(){
+          $("img.toggle").toggle(function(){
+            alert("A WILD SHENRON APPEARED! WHAT IS YOUR WISH?");
+          })
+        });
+        $("button.slide").click(function(){
+          $("img.slide").slideDown()
+        });
+        $("button.crush").click(function(){
+          $("img.crush").slideUp(1000)
+        });
+        $("button.spider").click(function(){
+          $("img.spider").slideToggle()
+        });
+        $("button.bones").click(function(){
+          $("img.bones").fadeIn(3000)
+          alert("We found a T-Rex!")
+        });
+        $("button.sun").click(function(){
+          $("img.sun").fadeOut(3000, function(){
+            alert("The sun, set!")
+          })
+        });
+        $("button.change").click(function(){
+          $("p.change").addClass("red");
+        });
+        $("button.before").click(function(){
+          $("p.before").before("VROOM! ");
+        });
+        $("button.after").click(function(){
+          $("p.after").after(" SURPRISE!! ");
+        });
+        $("button.add").click(function(){
+          $("p.add").append("CODING!")
+        });
+        $("button.exchange").click(function(){
+          $("p.exchange").html("<p>Thank you! I will be here all week!</p>");
+        });
+        $("button.super").click(function(){
+          $("img.klark").attr({
+            "src": "https://img.clipartfest.com/ba06bfd415ef635db6182eb41c35eac8_size-of-this-preview-384-480-lego-superman-clipart_902-1127.png"
+        });
+        });
+        $("button.name").click(function(){
+          var x = $("input").val();
+          $("p.name").text(x);
+        });
+        $("button.circle").click(function(){
+          $("img.circle").data("picture_info", "A red paintbrush drawn circle");
+          var y = $("img.circle").data("picture_info");
+          $("p.circle").text(y);
+        });
+      });
+    </script>
+
+
+
+  </head>
+  <body>
+    <h1 class="clickme">Click Me!</h1>
+      <p>Bind an event handler to the "click" JavaScript event, or trigger that event on an element.</p>
+      <button class="clickme" >Click Me!</button>
+    <hr>
+    <h1>
+      <p>Hide and Show the matched elements.</p>
+      <div>
+        <img class="hide" src="http://vignette1.wikia.nocookie.net/mario/images/c/ce/Big_Boo_Artwork_-_Mario_Pinball_Land.png/revision/latest?cb=20120414150828" alt="A picture of the Mario Ghost(Boo) Bad Guys">
+      </div>
+      <button class="hide">Face Boo</button>
+      <button class="show">Turn your back</button>
+    </h1>
+    <hr>
+    <h1>Where are the DragonBalls?</h1>
+    <div>
+      <img class="toggle" src="https://vignette3.wikia.nocookie.net/dragonball/images/6/63/Dragon_Balls_.png/revision/latest?cb=20120225164126" alt="A picture of eight Dragon Balls">
+    </div>
+    <button class="toggle">Click to Summon SHENRON!</button>
+    <hr>
+    <h1>How's Your Mood? (slideDown)</h1>
+    <div>
+      <img class="slide" src="http://images.clipartpanda.com/smiley-face-png-1238383755310.png" alt="A kermit happy face.">
+    </div>
+    <button class="slide">I'm feeling lucky!</button>
+    <hr>
+    <h1>Team Coke! (slideUp)</h1>
+    <div>
+      <img class="crush" src="http://pngimg.com/uploads/pepsi/pepsi_PNG5.png" alt="vertical positioned sports car">
+    </div>
+    <button class="crush">Crush Pepsi</button>
+    <hr>
+    <h1>Hiya! (slideToggle)</h1>
+      <div>
+        <img class="spider"src="http://wondersofdisney.webs.com/disxd/spiderman/spiderman/spidermanupsidedown.png" alt="A picture of spiderman hanging upsidedown">
+      </div>
+    <button class="spider">Itsy-Bitsy-Spider</button>
+    <hr>
+    <h1>Dinosaur Excavation! (fadeIn)</h1>
+      <div>
+        <img class="bones" src="http://www.eriepromotions.com/Media/Images/GemShow2.png" alt="A T-Rex Skeleton">
+      </div>
+    <button class="bones">Pick Ground</button>
+    <hr>
+    <h1>Chasing Daylight. (fadeOut)</h1>
+      <div>
+        <img class="sun" src="http://www.pngmart.com/files/3/Sun-PNG-Transparent-Image.png" alt="A picture of a sun">
+      </div>
+      <button class="sun">Sunset</button>
+    <hr>
+    <h1>Adding Class</h1>
+      <p class="change">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button class="change">Add some class to the paragraph!</button>
+    <hr>
+    <h1>TOKYO DRIFT (before)</h1>
+      <p class="before">SCCCCCCRRRRRRRRRRRRRTTTTTTTT</p>
+      <button class="before">Pedal to the Metal</button>
+    <hr>
+    <h1>Secret Bday (after)</h1>
+      <p class="after">HAPPY BIRTHDAY!</p>
+      <button class="after">Shock your friend!</button>
+    <hr>
+    <h1>My motto (append)</h1>
+      <p class="add">I LOVE </p>
+    <button class="add">What do you love?</button>
+    <hr>
+    <h1>The Magician</h1>
+      <p class="exchange">Welcome Boys and Girls to my Magic Show!</p>
+    <button class="exchange">ALAKAZAM!</button>
+    <hr>
+    <h1>The Changing Room</h1>
+      <div class="klark">
+        <img class="klark" src="http://vignette2.wikia.nocookie.net/lego/images/e/e6/Clark_Kent_fig.png/revision/latest?cb=20130125221615" alt="lego clark kent">
+      </div>
+    <button class="super">Go into telephone booth</button>
+    <hr>
+    <h1>What's Your Name?</h1>
+      <input type="text">
+      <p class="name"></p>
+      <button class="name">input</button>
+    <hr>
+    <h1>D8A</h1>
+      <img class="circle" src="https://lh3.googleusercontent.com/-OVjG7W2adNI/VxIAvA7xHOI/AAAAAAAACVs/iyjRLQV4SHE/s640/full-circle.png" alt="a red circle">
+      <p class="circle"></p>
+      <button class="circle">What's the picture?</button>
+    <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

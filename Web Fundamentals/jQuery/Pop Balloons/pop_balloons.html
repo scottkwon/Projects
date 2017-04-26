@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Popping Balloons!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script link="text/javascript">
+      $(document).ready(function(){
+        $("img").click(function(){
+          $(this).hide();
+        });
+        $("button.restore").click(function(){
+          $("img").show();
+        });
+      });
+    </script>
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <img class="balloon" src="https://img.clipartfest.com/8695ec9fd7a54f218fc74081442b3a8f_single-20clipart-single-balloon-clipart-png_222-299.png" alt="a single blue balloon">
+      <img class="balloon" src="https://img.clipartfest.com/8695ec9fd7a54f218fc74081442b3a8f_single-20clipart-single-balloon-clipart-png_222-299.png" alt="a single blue balloon">
+      <img class="balloon" src="https://img.clipartfest.com/8695ec9fd7a54f218fc74081442b3a8f_single-20clipart-single-balloon-clipart-png_222-299.png" alt="a single blue balloon">
+      <img class="balloon" src="https://img.clipartfest.com/8695ec9fd7a54f218fc74081442b3a8f_single-20clipart-single-balloon-clipart-png_222-299.png" alt="a single blue balloon">
+      <img class="balloon" src="https://img.clipartfest.com/8695ec9fd7a54f218fc74081442b3a8f_single-20clipart-single-balloon-clipart-png_222-299.png" alt="a single blue balloon">
+      <img class="balloon" src="https://img.clipartfest.com/8695ec9fd7a54f218fc74081442b3a8f_single-20clipart-single-balloon-clipart-png_222-299.png" alt="a single blue balloon">
+      <img class="balloon" src="https://img.clipartfest.com/8695ec9fd7a54f218fc74081442b3a8f_single-20clipart-single-balloon-clipart-png_222-299.png" alt="a single blue balloon">
+      <img class="balloon" src="https://img.clipartfest.com/8695ec9fd7a54f218fc74081442b3a8f_single-20clipart-single-balloon-clipart-png_222-299.png" alt="a single blue balloon">
+    </div>
+    <div class="button">
+      <button class="restore">Replay!</button>
+    </div>
+  </body>
+</html>

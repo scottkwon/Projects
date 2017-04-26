@@ -1,0 +1,39 @@
+img {
+  height: 100px;
+  width: 100px;
+}
+
+img.slide{
+  display:none;
+}
+
+
+img.spider {
+  height: 300px;
+  width: 100px;
+}
+
+img.bones {
+  height: 200px;
+  width: 200px;
+  display:none;
+}
+
+.red {
+  color: red;
+}
+
+img.klark{
+  height: 300px;
+  width: 100px;
+}
+
+img.super{
+  height:200px;
+  width:100px;
+}
+
+#super{
+  height: 200px;
+  width: 100px;
+}

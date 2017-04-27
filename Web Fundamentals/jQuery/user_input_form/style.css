@@ -1,0 +1,22 @@
+
+#table {
+  display: inline-block;
+  vertical-align: top;
+  border: 3px solid black;
+}
+
+th,td {
+  border: 1px solid solid;
+  text-align: left;
+  padding: 10px;
+  width: auto;
+}
+input{
+  display:block;
+  vertical-align: top;
+}
+
+.table{
+  height: auto;
+  width: auto;
+}

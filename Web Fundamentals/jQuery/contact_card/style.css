@@ -1,0 +1,43 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#back {
+display: none;
+}
+#left {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+#right {
+  display: inline-block;
+  vertical-align: top;
+  width: 1000px;
+}
+
+#card {
+  display:inline-block;
+  vertical-align: top;
+  height: 150px;
+  width: 300px;
+  border: 3px solid black;
+}
+.mini {
+  display:inline-block;
+  vertical-align: top;
+  height: 150px;
+  width: 300px;
+  border: 3px solid black;
+  text-align:center;
+}
+
+input {
+  display: block;
+  vertical-align: top;
+}
+
+desc {
+  display: hidden;
+}

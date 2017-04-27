@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Please Leave Your Card!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("form").submit(function(){
+          var full_name = $("#first").val() + " " + $("#last").val();
+          var desc = $("#desc").val();
+          $("input").val("");
+          $("textarea").val("");
+          $("#right").append("<div id='card'><p>" + full_name +  "</p><p id='back'>" + desc + "</p></div>");
+          return false;
+        });
+        $(document).on("click", "#card", function(){
+          $(this).children().toggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="left">
+        <form action="">
+          <label for="First Name">First Name:</label>
+          <input id="first" type="text" name"First Name">
+          <label for="Last Name">Last Name:</label>
+          <input id="last" type="text" name="Last Name">
+          <br>
+          <label for="Description">Description:</label>
+          <textarea id="desc" name="Description"></textarea>
+          <br>
+          <button type="submit">Drop off</button>
+        </form>
+      </div>
+      <div id="right">
+      </div>
+    </div>
+  </body>
+</html>

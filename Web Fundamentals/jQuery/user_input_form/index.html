@@ -1,0 +1,67 @@
+<!-- Takes user input and puts them into a table
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function(){
+
+
+        $("form").submit(function(){
+          var first = $("#first").val();
+          var last = $("#last").val();
+          var mail = $("#email").val();
+          var contact = $("#contact").val();
+          console.log("<td>"+ first + "</td>"+"<td>" + last + "</td>"+"<td>"+ mail + "</td>"+"<td>" + contact + "</td>")
+          $(".input_here").append(
+            "<tr>"+
+            "<td>"+ first + "</td>"+
+            "<td>" + last + "</td>"+
+            "<td>"+ mail + "</td>"+
+            "<td>"+ contact +"</td>"+
+            "</tr>"
+          );
+          $("input").val("");
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="table">
+      <table>
+        <thead>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Email Address</td>
+          <td>Contact #</td>
+        </thead>
+        <tbody class="input_here">
+        </tbody>
+      </table>
+    </div>
+    <hr>
+    <h1>Add New User</h1>
+    <div id="information">
+      <form action="">
+        <div class="table">
+          First Name<input id="first" type="text" name="First Name">
+        </div>
+        <div class="table">
+          Last Name<input id="last" type="text" name="Last Name">
+        </div>
+        <div class="table">
+          Email<input id="email" type="text" name="Email Address">
+        </div>
+        <div class="table">
+          Contact #<input id="contact" type="text" name="Contact #">
+        </div>
+        <button id="send" type="submit">Submit
+      </form>
+    </div>
+  </body>
+</html>

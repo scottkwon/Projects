@@ -17,7 +17,7 @@
        };
       $(document).ready(function(){
         addImg();
-        $("img").click(function(){
+        $("img").hover(function(){
           var info = "";
           var x = $(this).attr("src");
           var at = $(this).attr("id");
@@ -41,6 +41,7 @@
     <div id="population">
     </div>
     <div id="pokedex">
+      <h3>Use the pokeball to add Pokemon to your PokeDex!</h3>
     </div>
   </body>
 </html>

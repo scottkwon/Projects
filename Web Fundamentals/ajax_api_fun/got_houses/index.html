@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Who's House?</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type="text/javascript">
+      var base = "https://anapioficeandfire.com/api/houses/"
+      $(document).ready(function(){
+        $("img").click(function(){
+          var x = $(this).attr("house");
+          var url = base + x ;
+          var info = "";
+          $.get (url, "click", function(res){
+            var house = res.name;
+            var words = res.words;
+            var title = res.titles;
+            for (var i = 0; i < res.titles; i++){
+              info += "<li>" + res.titles[i] + "</li>";
+              console.log(info);
+            };
+            $("#info").html ( "<h3>Name:</h3>" + house + "<h3>Words:</h3>" + words + "<h3>Motto:</h3><ul>"+ title +"</ul>");
+          }, "json");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <div id="top_banner">
+
+          <h1> Choose your allegiance!</h1>
+          <img src="img/baratheon.png" house="17" alt="Picture of a stag">
+          </img>
+          <img src="img/lannister.jpg" house="229" alt="Picture of a lion">
+          </img>
+          <img src="img/stark.jpg" house="362" alt="Picture of a wolf">
+          </img>
+          <img src="img/targaryen.jpg" house="378" alt="Picture of a three headed red dragon">
+          </img>
+        </div>
+
+
+      <div id = "info">
+      </div>
+
+    </div>
+  </body>
+</html>

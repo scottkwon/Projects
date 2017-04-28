@@ -15,8 +15,9 @@
 .poke {
   display: inline-block;
   vertical-align: top;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  margin: 20 px;
 }
 
 #pokedex {
@@ -24,4 +25,9 @@
   vertical-align: top;
   width: 25%;
   border: 3px solid red;
+  position: fixed;
+}
+
+body, html {
+    cursor: url(Pokeball.png), pointer;
 }

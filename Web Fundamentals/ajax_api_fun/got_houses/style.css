@@ -1,0 +1,34 @@
+#wrapper, #top_banner, #info {
+  width: 100%;
+}
+
+
+#wrapper {
+  width: auto;
+  margin: 10%;
+}
+
+
+#top_banner {
+  width: 100%;
+  border: 3px solid black;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
+img {
+  width: auto;
+  height: 200px;
+}
+
+#info {
+  padding: 10px;
+  display: block;
+  vertical-align: top;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  border: 3px solid black;
+}

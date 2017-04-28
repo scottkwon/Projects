@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Whats the Weather?</title>
+    <link rel="stylesheet" href="style.css">
+    <script>"http://api.openweathermap.org/data/2.5/forecast/daily?id=524901&APPID=eebc7591f523e687d0bbca39baaf4cf3"</script>
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script text="text/javascript">
+      $(document).ready(function(){
+        var unit = "&units=imperial"
+        var base = "http://api.openweathermap.org/data/2.5/weather?q=";
+        var key = "&&APPID=eebc7591f523e687d0bbca39baaf4cf3";
+        $("form").submit(function(){
+          var loc = $("#location").val();
+          console.log(loc)
+          $("input").val("");
+          var url = base + loc + key + unit;
+          console.log(url)
+          $.get(url, function(res) {
+            var temp = res.main.temp;
+            console.log(temp);
+            $("#weather").text('The weather in ' + loc + ' is ' + temp+ "°F")
+          }, "json");
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Whats the Weather Like?</h1>
+    <p>This is a web page to determine a location's weather.</p>
+    <form action="">
+      <input id = "location" type="text" placeholder="City, State , Country">
+      <input type="submit">
+    </form>
+    <p id="weather"></p>
+  </body>
+</html>

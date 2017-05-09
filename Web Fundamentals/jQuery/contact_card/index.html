@@ -12,7 +12,7 @@
           var desc = $("#desc").val();
           $("input").val("");
           $("textarea").val("");
-          $("#right").append("<div id='card'><p>" + full_name +  "</p><p id='back'>" + desc + "</p></div>");
+          $("#right").append("<div id='card'><p>" + full_name +  "</p><p>Click to flip!</p><p id='back'>" + desc + "</p></div>");
           return false;
         });
         $(document).on("click", "#card", function(){

@@ -41,9 +41,18 @@ class CallCenter(object):
         print "People in Queue: {}".format(self.qsize)
         return self
 
-caller1 = Caller("a1b2c3", "scott", "6616616666", "12:30AM", "headache")
-caller2 = Caller("a1b2c3", "steve", "6616616666", "12:30AM", "headache")
-caller3 = Caller("a1b2c3", "phil", "6616616666", "12:30AM", "headache")
+caller1 = Caller("a1b2c3", "scott", "661-661-6666", "12:30AM", "headache")
+caller2 = Caller("a1b2c3", "steve", "310-222-4021", "12:30AM", "headache")
+caller3 = Caller("a1b2c3", "phil", "213-223-4564", "12:30AM", "headache")
 CallCenter = CallCenter()
-CallCenter.add(caller1).add(caller2).add(caller3)
+CallCenter.add(caller1).add(caller2).add(caller3).remove_number()
 CallCenter.callerinfo()
+
+#output
+#scott
+#661-661-6666
+#steve
+#661-661-6666
+#phil
+#661-661-6666
+#People in Queue: 3

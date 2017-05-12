@@ -1,0 +1,12 @@
+p {
+display: inline-block;
+color: blue;
+width: 400px;
+height: 300px
+}
+
+img {
+display: inline-block;
+width: 400px;
+height: 300px
+}

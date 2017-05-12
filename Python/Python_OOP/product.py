@@ -14,14 +14,14 @@ class product(object):
         return self
     def Return(self):
         reason = input("> ")
-        if "defect" in reason:
+        if "def" in reason:
             self.status = "Defective"
-            self.cost = 0
+            print self.cost = 0
         elif "in box" in reason:
-            self.status = "Like New, For Sale"
+            print self.status = "Like New, For Sale"
         elif "open" in reason:
             self.status = "USED"
-            self.cost = self.cost - (self.cost * .20)
+            print self.cost = self.cost - (self.cost * .20)
         return self
     def display(self):
         print "Your item is {} {}".format(self.brand,self.item)

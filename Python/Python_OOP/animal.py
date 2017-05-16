@@ -14,8 +14,8 @@ class Animal(object):
         print "The current health of {} is: {}%".format(self.name,self.health)
         return self
 class Dog(Animal):
-    def __init__(self,name):
-        super(Dog, self).__init__(name)
+    def __init__(self,health):
+        super(Dog, self).__init__(health)
         self.health = 150
     def pet(self):
         self.health += 50

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TMNT</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+<img src="{{url_for('static',filename='img/tmnt.png')}}" alt="A picture of all 4 Ninja Turtles">
+<h2>Choose your favorite Turtle's Bandana Color!</h2>
+<h2>Enter the color name into the browser after the /</h2>
+<ul>
+    <li class="blue"><a class="blue" href='/blue' col="Leonardo">Blue</a></li>
+    <li class="orange"><a class="orange" href='/orange' col="Michelangelo">Orange</a></li>
+    <li class="red"><a class="red" href='/red' col="Raphael">Red</a></li>
+    <li class="purple"><a class="purple" href='/purple' col="Donatello">Purple</a></li>
+</ul>
+</body>
+</html>

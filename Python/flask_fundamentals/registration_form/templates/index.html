@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <form action="/create" method='post'>
+            {% with errors = get_flashed_messages(category_filter=["emailError"]) %}
+                {% if errors %}
+                <div class='error'>
+                    {% for msg in errors %}
+                        <p>{{ msg }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+            <label for="email">Email: </label>
+            <input type="text" name='email'>
+            {% with errors = get_flashed_messages(category_filter=["firstNameError"]) %}
+                {% if errors %}
+                <div class='error'>
+                    {% for msg in errors %}
+                        <p>{{ msg }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+            <label for="fname">First Name: </label>
+            <input type="text" name='firstName'>
+            {% with errors = get_flashed_messages(category_filter=["lastNameError"]) %}
+                {% if errors %}
+                <div class='error'>
+                    {% for msg in errors %}
+                        <p>{{ msg }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+            <label for="lname">Last Name: </label>
+            <input type="text" name='lastName'>
+            {% with errors = get_flashed_messages(category_filter=["passwordError"]) %}
+                {% if errors %}
+                <div class='error'>
+                    {% for msg in errors %}
+                        <p>{{ msg }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            {% endwith %}
+            <label for="pass">Password: </label>
+            <input type="text" name='pass'>
+            <label for="confpass">Confirm Password: </label>
+            <input type="text" name='confpass'>
+            <input type="submit" name="" value="Submit">
+        </form>
+
+        <form class="new" action="/clear" method="post">
+            <button type="submit" name="button">Click to add new user</button>
+        </form>
+    </body>
+</html>

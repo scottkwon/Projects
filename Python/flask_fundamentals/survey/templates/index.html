@@ -3,15 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Survery Index</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link type="text/css" rel="stylesheet"  href="{{url_for('static', filename='css/style.css')}}">
 </head>
 <body>
-     <form action="/result" method="post">
-         Name: <input type="text" name="name">
-         Location: <input type="text" name="location">
-         Language: <input type="text" name="lang">
-         Comment: <textarea name="comment" rows="4" cols="50"></textarea>
-        <input type="submit" value="submit">
-    </form>
+        <div class="request">
+            <h1>Tell us a little about yourself!</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages%}
+                    {% for message in messages %}
+                        <p>{{message}}</p>
+                    {% endfor%}
+                {% endif %}
+            {% endwith %}
+             <form action="/result" method="post">
+                 <label for="name">Name: </label>
+                 <input type="text" name="name">
+                 <label for="loaction">Location: </label>
+                 <select name="location" id="">
+                     <option value="">Washington</option>
+                     <option value="">California</option>
+                     <option value="">Dallas</option>
+                     <option value="">Arizona</option>
+                     <option value="">Chicago</option>
+                 </select>
+                 <label for="language">Favorite Coding Language: </label>
+                 <select name="lang" id="">
+                     <option value="">Swift</option>
+                     <option value="">Ruby on Rails</option>
+                     <option value="">Python</option>
+                     <option value="">JavaScript</option>
+                 </select>
+                 <label for="comment">Comments: </label>
+                 <textarea name="comment" rows="5" cols="25"></textarea>
+                <input type="submit" value="submit">
+            </form>
+        </div>
 </body>
 </html>

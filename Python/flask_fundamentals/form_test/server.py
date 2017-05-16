@@ -8,12 +8,15 @@ def home():
 
 @app.route('/users', methods=['POST'])
 def create_user():
-    #requesting input from user to make our variable name and email.
     name = request.form['name']
     email = request.form['email']
     print "Got Post Info"
     print request.form
     return redirect('/')
+
+@app.route('/show')
+def show_users():
+    return render_template('user.html', name="Scott", email='scottykwon@gmail.com')
 
 @app.route('/users/<username>')
 def show_user_profile(username):

@@ -1,1 +1,1 @@
-alert('Hello Flask!')
+//alert('Hello Flask!')

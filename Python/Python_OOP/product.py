@@ -32,3 +32,4 @@ class product(object):
 
 Shoes = product("Ultraboost", 0.2, "Adidas", 200, "For Sale")
 Shoes.Return().display()
+

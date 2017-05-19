@@ -8,7 +8,7 @@ app.secret_key = '1eu2rh24rh49fwfhw9'
 def index():
     session['snum'] = random.randrange(1,11)
     print session['snum']
-    return render_template('index.html', hide="hide")
+    return render_template('index.html')
 
 @app.route('/posted', methods=['POST'])
 def posted():

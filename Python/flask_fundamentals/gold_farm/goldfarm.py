@@ -17,7 +17,7 @@ def WorL():
         return False
 
 def addactivity(num, action, location):
-    time = datetime.datetime.now()
+    time = datetime.now()
     win = 'Earned {} from the {}! {}'.format(num, location, time)
     lost = 'Lost {} from the {}! {}'.format(num, location, time)
     if location == "farm":

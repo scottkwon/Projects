@@ -1,0 +1,12 @@
+#box {
+    border: 3px solid black;
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    width: 40%;
+}
+
+input {
+    padding: auto;
+    margin: auto
+}

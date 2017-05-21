@@ -1,0 +1,29 @@
+h1, p {
+    text-align: center
+}
+#wrapper {
+    display: inline-block;
+    width: 100%;
+}
+#row {
+    display: inline-block;
+    width: 100%;
+    margin-left: 12%
+}
+
+.card {
+    display: inline-block;
+    width: 25%;
+    height: 40%;
+    border: 3px solid black;
+    vertical-align: top;
+
+}
+
+.url {
+    text-align: center;
+}
+
+.snippet {
+    height: 125px;
+}

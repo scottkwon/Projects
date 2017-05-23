@@ -1,0 +1,32 @@
+.row {
+    width: 100%;
+    display: inline-block;
+}
+
+.task {
+    width: 22%;
+    height: 250px;
+    display: inline-block;
+}
+
+
+.activity {
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+    height: 300px;
+    overflow: scroll;
+}
+
+.earn {
+    color: green
+}
+
+.lose {
+    color: red
+}

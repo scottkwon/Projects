@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Surprise Me!</title>
+    </head>
+    <body>
+        <div class="surprises">
+            <ul>
+                {% for surprise in surprises %}
+                    <li>{{ surprise }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>

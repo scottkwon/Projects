@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farm Gold!</title>
+    {% load staticfiles %}
+ <link rel="stylesheet" href="{% static 'goldfarm_app/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+    <h1>Do Different Tasks To Farm Gold!</h1>
+    <h2>Your gold: </h2>
+    <div id='gold'>
+        {{ total }}
+    </div>
+    <form class="" action="/reset/" method="post">
+        {% csrf_token %}
+        <input type="submit" name="" value="Reset Gold">
+    </form>
+    <div class="row">
+        <div class="task">
+            <h3>Farm</h3>
+            <p>(earns 10-20 gold)</p>
+            <form action="/process_money/" method="post">
+            {% csrf_token %}
+              <input type="hidden" name="building" value="farm" />
+              <input type="submit" value="Find Gold!"/>
+            </form>
+        </div>
+        <div class="task">
+            <h3>Cave</h3>
+            <p>(earns 5-10 gold)</p>
+            <form action="/process_money/" method="post">
+            {% csrf_token %}
+              <input type="hidden" name="building" value="cave" />
+              <input type="submit" value="Find Gold!"/>
+            </form>
+        </div>
+        <div class="task">
+            <h3>House</h3>
+            <p>(earns 2-5 gold)</p>
+            <form action="/process_money/" method="post">
+            {% csrf_token %}
+              <input type="hidden" name="building" value="house" />
+              <input type="submit" value="Find Gold!"/>
+            </form>
+        </div>
+        <div class="task">
+            <h3>Casino</h3>
+            <p>(earn/lose 0-50 gold)</p>
+            <form action="/process_money/" method="post">
+            {% csrf_token %}
+              <input type="hidden" name="building" value="casino" />
+              <input type="submit" value="Find Gold!"/>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div id="activity">
+            <h3>Activities:</h3>
+            <ul>
+                {% for class, activity in activities %}
+                    <li class="{{class}}"> {{activity}} </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

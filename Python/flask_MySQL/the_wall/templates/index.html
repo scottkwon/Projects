@@ -18,7 +18,7 @@
                 {% endif %}
             {% endwith %}
             <label for="first_name">First Name: </label>
-            <input type="text" name="first_name" value="">
+            <input type="text" name="first_name">
             {% with errors = get_flashed_messages(category_filter=["lastNameError"]) %}
                 {% if errors %}
                 <div class='error'>
@@ -54,8 +54,26 @@
             <input type="text" name="password" value="">
             <label for="confirm_password">Confirm Password: </label>
             <input type="text" name="confirm_password" value="">
-            <input type="hidden" name="register" value=""/>
+            <input type="hidden" name="add_user" value=""/>
             <input type="submit" name="" value="Submit">
+        </form>
+        <form class="column" action="/check" method="post">
+            <h1>Please log in!</h1>
+            {% with errors = get_flashed_messages(category_filter=["inputError"]) %}
+            {% if errors %}
+            <div class='error'>
+                {% for msg in errors %}
+                <small style = "color: red">{{ msg }}</small>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            <label for="email">Email: </label>
+            <input type="text" name="email" value="">
+            <label for="password">Password: </label>
+            <input type="text" name="password" value="">
+            <input type="hidden" name="check" value=""/>
+            <input type="Submit" name="" value="LOG IN!">
         </form>
     </body>
 </html>

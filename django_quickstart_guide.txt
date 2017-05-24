@@ -1,4 +1,4 @@
-1. activate our django virtual environment.
+ 1. activate our django virtual environment.
 
 2. use django-admin to create our project.
 -- django-admin startproject main

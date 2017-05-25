@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Course Catalog</title>
+    </head>
+    <body>
+        <h3>Add a new course:</h3>
+        <form action="/add/" method="post">
+        {% csrf_token %}
+        <label>
+            <p>Name: <input type="text" name="name"></p>
+        </label>
+        <label>
+            <p>Description: <br> <textarea name="description" rows="8" cols="80"></textarea></p>
+        </label>
+            <p><input type="submit"></p>
+        </form>
+        <br>
+        <h3>Courses: </h3>
+        <table>
+            <tr>
+                <th>Course Name: </th>
+                <th>Description: </th>
+                <th>Date Added: </th>
+                <th>Action: </th>
+            </tr>
+            {% for course in courses %}
+            <tr>
+                <td>{{course.name}}</td>
+                <td>{{course.description}}</td>
+                <td>{{course.created_at}}</td>
+                <td><a href="/remove/{{course.id}}/">remove</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

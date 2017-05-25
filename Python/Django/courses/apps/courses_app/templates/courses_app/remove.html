@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>ARE YOU SURE YOU WANT TO DELETE THE FOLLOW COURSE?</h1>
+        <p>Name: {{ target.name }}</p>
+        <p>Description: {{ target.description }}</p>
+        <button><a href="/">No</a></button>
+        <button><a href="/confirm/{{target.id}}">YES! I want to delete</a></button>
+    </body>
+</html>

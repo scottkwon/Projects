@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Books Home</title>
+    </head>
+    <body>
+        <h3>Welcome, {{request.session.first_name}}!</h3>
+        <span><a href="/books/add/">Add Book and Review</a></span>
+        <span><a href="/logout/">Logout</a></span>
+        <div class="column">
+            <h2>Recent Book Reviews: </h2>
+        </div>
+        <div class="column">
+            <h3>Other Books with Reviews: </h3>
+            <fieldset>
+            </fieldset>
+        </div>
+
+    </body>
+</html>

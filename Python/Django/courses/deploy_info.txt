@@ -1,0 +1,60 @@
+IPv4 Public IP
+54.183.100.236
+
+chmod 400 demo_deploy_key.pem
+ssh -i "demo_deploy_key.pem" ubuntu@ec2-54-183-100-236.us-west-1.compute.amazonaws.com
+sudo apt-get update
+sudo apt-get install python-pip python-dev nginx git
+sudo apt-get update
+sudo pip install virtualenv
+git clone (link to deploy app)
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+pip install django bcrypt django-extensions
+pip install gunicorn
+
+main setting.py -> allowed hosts w/ IP in quotes -> debug = False
+STATIC_ROOT = os.path.join(BASE_DIR, "static/") @ end
+
+python manage.py collectstatic
+
+gunicorn --bind 0.0.0.0:8000 main.wsgi:application
+
+sudo vim /etc/systemd/system/gunicorn.service
+[Unit]
+Description=gunicorn daemon
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/Courses-App-Deployment
+ExecStart=/home/ubuntu/Courses-App-Deployment/venv/bin/gunicorn --workers 3 --bind unix:/home/ubuntu/Courses-App-Deployment/main.sock main.wsgi:application
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl daemon-reload
+sudo systemctl start gunicorn
+sudo systemctl enable gunicorn
+
+sudo vim /etc/nginx/sites-available/main
+server {
+  listen 80;
+  server_name 54.183.100.236;
+  location = /favicon.ico { access_log off; log_not_found off; }
+  location /static/ {
+      root /home/ubuntu/Courses-App-Deployment;
+  }
+  location / {
+      include proxy_params;
+      proxy_pass http://unix:/home/ubuntu/Courses-App-Deployment/main.sock;
+  }
+}
+
+sudo ln -s /etc/nginx/sites-available/main /etc/nginx/sites-enabled
+sudo nginx -t
+
+ sudo rm /etc/nginx/sites-enabled/default
+
+
+sudo ln -s /etc/nginx/sites-available/main /etc/nginx/sites-enabled

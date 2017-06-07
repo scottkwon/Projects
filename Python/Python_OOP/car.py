@@ -9,7 +9,7 @@ class car(object):
         else:
             print "Tax: {}".format(.12)
         self.name = name
-        self.price = price
+
     def display_all(self):
         print "Car Make: {}".format(self.name)
         print "Price: ${}".format(self.price)

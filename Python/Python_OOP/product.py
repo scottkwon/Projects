@@ -5,24 +5,31 @@ class product(object):
         self.brand = brand
         self.cost = cost
         self.status = "For Sale"
+
     def sell(self):
         self.status = "Sold!"
         return self
+
     def tax(self, float):
         total_with_tax = self.cost + (float * self.cost)
         print "Your total with tax is ${}".format(total_with_tax)
         return self
+
     def Return(self):
         reason = input("> ")
         if "def" in reason:
             self.status = "Defective"
-            print self.cost = 0
-        elif "in box" in reason:
-            print self.status = "Like New, For Sale"
+            self.cost = 0
+            print self
+        elif "box" in reason:
+            self.status = "Like New, For Sale"
+            print self
         elif "open" in reason:
             self.status = "USED"
-            print self.cost = self.cost - (self.cost * .20)
+            self.cost = self.cost - (self.cost * .20)
+            print self
         return self
+
     def display(self):
         print "Your item is {} {}".format(self.brand,self.item)
         print "The condition of your item is: {}".format(self.status)
@@ -32,4 +39,3 @@ class product(object):
 
 Shoes = product("Ultraboost", 0.2, "Adidas", 200, "For Sale")
 Shoes.Return().display()
-

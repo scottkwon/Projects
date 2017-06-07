@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Use the github api to make a callback for my username -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hunting GitHub!</title>
+        <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $('#name').click(function (){
+                $.get("https://api.github.com/users/scottkwon", displayName)
+                function displayName(res){
+                    var name = res.login;
+                    $('#myName').html("<h3>My GitHub username is: "+name+"</h3>")
+                }
+            })
+        });
+        </script>
+
+    </head>
+    <body>
+        <button type="button" id="name">Show Me!</button>
+        <div id="myName"></div>
+    </body>
+</html>

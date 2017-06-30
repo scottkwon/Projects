@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>User Page</title>
+    </head>
+    <body>
+        <h1>{{user.name}}</h1>
+
+        <h2>Interests:</h2>
+        <ul>
+        {% for interest in interests %}
+        <li>{{ interest.content }} - <a href="/delete/{{interest.id}}">delete</a></li>
+
+        {% endfor %}
+        </ul>
+    </body>
+</html>

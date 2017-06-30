@@ -1,0 +1,13 @@
+*{
+    margin:0;
+    padding:0;
+    width: 100%
+}
+.column {
+    display: inline-block;
+    margin-top: 3%;
+    vertical-align: top;
+    width: 40%;
+    overflow: scroll;
+
+}

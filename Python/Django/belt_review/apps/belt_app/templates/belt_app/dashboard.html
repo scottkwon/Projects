@@ -3,17 +3,31 @@
     <head>
         <meta charset="utf-8">
         <title>Books Home</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'belt_app/css/col.css' %}">
     </head>
     <body>
-        <h3>Welcome, {{request.session.first_name}}!</h3>
+        <h3>Welcome, {{request.session.first_name}}!</h3>   
+        <br>
         <span><a href="/books/add/">Add Book and Review</a></span>
         <span><a href="/logout/">Logout</a></span>
         <div class="column">
             <h2>Recent Book Reviews: </h2>
+            {% for review in reviews %}
+                <h2><a href="{% url 'books_app:book_review' id=review.id %}">{{review.book.title}}</a></h2>
+                <p>Rating: {{review.rating}}</p>
+                <p><a href="{% url 'books_app:user_page' id=review.user.id %}"> {{ review.user.first_name }}</a> says: {{review.content}} </p>
+                <p><i>Posted on {{review.created_at}}</i></p>
+                <br>
+            {% endfor %}
+                   
         </div>
         <div class="column">
             <h3>Other Books with Reviews: </h3>
-            <fieldset>
+            <fieldset style="width:30%">
+            {% for review in more_reviews %}
+            <p><a href="{% url 'books_app:book_review' id=review.id %}">{{review.book.title}}</a></p>
+            {% endfor %}
             </fieldset>
         </div>
 

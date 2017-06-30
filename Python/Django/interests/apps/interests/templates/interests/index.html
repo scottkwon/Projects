@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>User Interests</title>
+    </head>
+    <body>
+        <form class="" action="/add/" method="post">
+            {% csrf_token %}
+            <p><label>
+                Name: <input type="text" name="name" value="">
+            </label></p>
+            <p><label>
+                Interest: <input type="text" name="content" value="">
+            </label></p>
+            <p><input type="Submit" name="" value="Submit"></p>
+        </form>
+    </body>
+</html>

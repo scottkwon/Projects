@@ -18,3 +18,4 @@ fibCounter() // "8"
 fibCounter() // "13"
 fibCounter() // "21"
 fibCounter() // "34"
+fibCounter()

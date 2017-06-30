@@ -5,9 +5,12 @@
         <title>User Profile</title>
     </head>
     <body>
-        <p>First Name: </p>
-        <p>Email: </p>
-        <p>Total Reviews: </p>
+        <p>First Name: {{user.first_name}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Total Reviews: {{count}}</p>
         <h4>Posted Reviews on the following books: </h4>
+        {% for book in books %}
+        <p><a href="{% url 'belt_app:book_review' id=book.id%}">{{book.title}}</a></p>
+        {% endfor %}
     </body>
 </html>

@@ -22,7 +22,7 @@ class BookManager(models.Manager):
             no_errors = False
             messages.error(request, 'Please enter an author')
 
-        if not WORD_REGEX.match(request.POST['content']):
+        if len(request.POST['content']) < 2:
             no_errors = False
             messages.error(request,'Please enter a thoughtful review')
 
@@ -45,6 +45,6 @@ class Review(models.Model):
     content = models.TextField()
     rating = models.IntegerField()
     user = models.ForeignKey('login_app.User')
-    book = models.ForeignKey(Book)
+    book = models.ForeignKey(Book, related_name='reviews')
     updated_at = models.DateTimeField(auto_now=True)
     created_at = models.DateTimeField(auto_now_add=True)

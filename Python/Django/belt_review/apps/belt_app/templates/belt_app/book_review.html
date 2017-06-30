@@ -5,20 +5,52 @@
         <title>Book Review</title>
     </head>
     <body>
-        <span><a href="/">Home</a></span>
+        <span><a href="/books">Home</a></span>
         <span><a href="/logout">Logout</a></span>
-        {% for book in books%}
-        <h2>Book title: {{book.title}}</h2>
-        <h2>Book author: {{book.author.name}}</h2>
-        {% endfor %}
         <br>
-        <h2>Reviews: </h2>
-            {%for review in reviews %}
-            <h5>Rating: {{review.rating}}</h5>
-            <a href="/user/{{review.user.id}}/">{{review.user.first_name}}</a>
-            says: <i>{{review.content}}</i>
-            <p>Posted on: {{review.created_at}}</p>
-            <hr>
-            {%  endfor %}
+        <h2>Book title: {{ book.title }}</h2>
+        <h2>Book author: {{ book.author.name }}</h2>
+        <br>
+        <div class="column">
+            <h2>Reviews: </h2>
+                {% for review in reviews %}
+                <h5>Rating: {{ review.rating }}</h5>
+                <a href="/user/{{review.user.id}}/">{{ review.user.first_name }}</a>
+                says: <i>{{ review.content }}</i> 
+                
+                    {% if review.user.id == request.session.user_id %}
+                        <a href="{% url 'books_app:delete' id=review.id%}">delete</a>
+                    {% endif %}
+
+                <p>Posted on: {{ review.created_at }}</p>
+                <br>
+                {%  endfor %}       
+        </div>
+        <div class="column">
+            <h2>Add Review: </h2>
+                <form action= "{% url 'books_app:create_review' id=book.id %}", method='post'>
+                    {% csrf_token %}
+
+                    <p>
+                    <label>
+                       <p>Review:</p>  <textarea name='content' row="10" cols="40"></textarea>
+                    </label>
+                    </p>
+
+                    <p>
+                    <label>
+                        Rating: <select name='rating'>
+                            <option value='5'>5</option>
+                            <option value='4'>4</option>
+                            <option value='3'>3</option>
+                            <option value='2'>2</option>
+                            <option value='1'>1</option>
+                        </select>
+                    </label>
+                    </p>
+                    <p><input type="Submit"></p>
+
+                </form>
+    </div>
     </body>
 </html>

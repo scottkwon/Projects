@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Math</title>
+</head>
+<body>
+    <script>
+    function zero_negativity(Arr){
+        var neg = false;
+        for(var i = 0; i<Arr.length; i++){
+            if(Arr[i] < 0){
+                neg = true;
+            }
+        }
+        console.log(neg)
+        return neg
+    }
+    zero_negativity([1,2,-3,1])
+    // true
+
+    function is_even(number){
+        var even = false;
+        if (number % 2 == 0){
+            even = true
+        }
+        console.log(even)
+        return even
+    }
+    is_even(3)
+    // false
+
+    function how_many_even(arr){
+        var count = 0;
+        for(var i = 0; i<arr.length; i++){
+            if(arr[i]%2==0){
+                count++;
+            }
+        }
+        console.log(count)
+        return count
+    }
+    how_many_even([2,4,7])
+    // 2
+
+    function create_dummy_array(n){
+        var newArr=[];
+        for (var i = 0; i<n; i++){
+            newArr.push(Math.floor(Math.random()*10))
+        }
+        console.log(newArr)
+        return newArr
+    }
+    create_dummy_array(5)
+    // [3, 8, 4, 3, 7]
+
+    function random_choice(arr){
+        var random = Math.floor(arr.length*Math.random())
+        console.log(arr[random])
+    }
+    random_choice([1,2,3])
+
+
+    </script>
+</body>
+</html>

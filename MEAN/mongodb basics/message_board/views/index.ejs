@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Message Board</title>
+</head>
+<body>
+    <h1 style="text-align: left">Welcome to the Message Board!</h1>
+    <hr>
+    <div>
+        <form action="/posts" method="POST">
+            <p>Name: <input type="text" name="name"><p>
+            <p>Message:</p> 
+            <p><textarea rows="4" cols="50" name="content"></textarea></p>
+            <input type="Submit" value="Create Post">
+        </form>
+    </div>
+    <br>
+    <br>
+        <% for(let i = 0; i < posts.length; i++) { %>
+            <div style="border: solid 1px black">
+                <h5><%= posts[i].content %></h5>
+                <p>--<%= posts[i].name %></p>
+                <div style="margin-left:50px">
+                    <% for(let j = 0; j < posts[i].comments.length; j++) { %>
+                        <h5><%= posts[i].comments[j].content %></h5>
+                        <p>--<%= posts[i].comments[j].name %></p>
+                    <% } %>
+                </div>
+                <form action="/comments/<%= posts[i]._id %>" method="POST" style="margin-left:50px">
+                    <p>Name: <input type="text" name="name"><p>
+                    <p>Comment:</p> 
+                    <p><textarea rows="4" cols="50" name="content"></textarea></p>
+                    <input type="Submit" value="Create Comment">
+                </form>
+            </div>
+        <% } %>
+</body>
+</html>

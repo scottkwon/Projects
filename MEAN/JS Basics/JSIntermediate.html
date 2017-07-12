@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js Intermediate</title>
+</head>
+<body>
+    <script>
+    function draw_stars(arr){
+        var grid = "";
+        for( var i = 0; i<arr.length; i++){
+            if (typeof arr[i] === 'number'){
+                for (var j = 0; j<arr[i]; j++){
+                    grid+='*'
+                }
+                grid+='\n'
+            }
+            if (typeof arr[i] === 'string'){
+                for (var j = 0; j<arr[i].length; j++){
+                    grid+=arr[i][0]
+                }
+                grid+='\n'
+            }
+        }
+        console.log(grid)
+    }
+    draw_stars([4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"])
+    
+    </script>
+</body>
+</html>

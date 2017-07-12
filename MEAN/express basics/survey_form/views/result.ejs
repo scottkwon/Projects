@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survery Results!</title>
+    <link type="text/css" rel="stylesheet"  href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="request">
+        <h1>Submitted Info:</h1>
+        <p>Name: <%= name %></p>
+        <p>Dojo Location: <%= location %></p>
+        <p>Favorite Language: <%= lang %></p>
+        <p>Comment: <%= comment %></p>
+        <p><a href="/">GO BACK!</a></p>
+    </div>
+</body>
+</html>

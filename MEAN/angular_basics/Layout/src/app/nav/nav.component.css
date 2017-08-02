@@ -1,0 +1,19 @@
+.nav {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    height: 500px;
+    margin: 4%;
+    margin-top: 0%;
+    background: skyblue;
+    padding: 1%;
+    border: 1px solid black;
+
+}
+
+.btn {
+    margin-left: 25%;
+    width: 50%;
+    height: 25px;
+    border-radius: 5px;
+}

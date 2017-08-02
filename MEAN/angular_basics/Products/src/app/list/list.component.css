@@ -1,0 +1,24 @@
+div {
+    display: inline-block;
+    width: 20%;
+    height: 50%;
+}
+
+#edit{
+    background-color: orange;
+    width: 60%;
+    margin-left: 17%;
+}
+
+#delete{
+    background-color: red;
+    width: 60%;
+    margin-left: 17%;
+
+}
+
+img{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}

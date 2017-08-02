@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login and Registration</title>
+        <style media="screen">
+            .error{
+                color:red;
+            }
+            .success{
+                color:green;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    </head>
+    <body>
+        <ul>
+        <% if(typeof(errors) != 'undefined') { %>
+            <% for(var x in errors) { %>
+                <li><%= errors[x].message %></li> 
+            <% } %>
+        <% } %>
+        </ul>
+        <fieldset class='' style='display: inline-block; width: 45%; vertical-align:top; margin-left: 5%'>
+            <legend>Registration</legend>
+            <form action="/create" method="post" class='container'>
+                
+                <label>
+                    <p>Email: <input type="text" name="email"></p>
+                </label>          
+                <label>
+                    <p>First Name: <input type="text" name="first_name"></p>
+                </label>
+                <label>
+                    <p>Last Name: <input type="text" name="last_name"></p>
+                </label>
+                <label>
+                    <p>Birthday: <input type="date" name="birthday"></p>
+                </label>
+                <p>* Password must be atleast 8 characters!</p>
+                <label>
+                    <p>Password: <input type="password" name="password"></p>
+                </label>
+                <label>
+                    <p>Confirm Password: <input type="password" name="confirm_password"></p>
+                </label>
+                
+                <br>
+                <input type="submit" value="Register">
+            </form>
+        </fieldset>
+        <fieldset class='' style='display: inline-block; width: 45%'>
+            <legend>Login</legend>
+            <form action="/login" method="post" class='container'>
+                <label>
+                    <p>Email: <input type="text" name="email"></p>
+                </label>
+                <label>
+                    <p>Password: <input type="password" name="password"></p>
+                </label>
+                <br>
+                <input type="Submit" value="Login">
+            </form>
+        </fieldset>
+    </body>
+</html>

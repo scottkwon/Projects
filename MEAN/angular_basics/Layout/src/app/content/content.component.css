@@ -1,0 +1,10 @@
+.content {
+    display: inline-block;
+    vertical-align: top;
+    width: 58.6%;
+    height: 500px;
+    margin: 0%;
+    background: skyblue;
+    padding: 1%;
+    border: 1px solid black;
+}

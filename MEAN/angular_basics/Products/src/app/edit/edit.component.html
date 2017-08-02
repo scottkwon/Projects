@@ -1,0 +1,17 @@
+<fieldset>
+  <h1>Edit Product</h1>
+  <form #formData="ngForm" (submit)="updateProducts()">
+      <p>Title: <input type="text" name="title" required minlength="4" [(ngModel)]="currProduct.title" #itemtitle="ngModel"></p>
+      <div *ngIf="itemtitle.errors && itemtitle.dirty">
+        <p class="error" *ngIf="itemtitle.errors?.required">Title of product is required</p>
+        <p class="error" *ngIf="itemtitle.errors?.minlength">Title of product must be atleast 4 characters</p>
+      </div>
+      <p>Price: <input type="number" name="price" required [(ngModel)]="currProduct.price" #itemprice="ngModel"></p>
+      <div *ngIf="itemprice.errors && itemprice.dirty">
+        <p class="error" *ngIf="itemprice.errors?.required">Price of product is required</p>
+      </div>
+      <p>Image Url: <input type="text" name="url" [(ngModel)]="currProduct.url"></p>
+      <p><button (click)="deleteProduct()">Delete</button></p>
+      <p><button [hidden]="!formData.valid" type="Submit" >Edit Item!</button></p>
+  </form>
+</fieldset>

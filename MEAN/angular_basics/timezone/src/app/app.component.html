@@ -1,0 +1,11 @@
+<h2>{{ title }}</h2>
+
+<button (click)="changeTZ('America/Los_Angeles', 0)" class="{{color[0]}}">PST</button>
+<button (click)="changeTZ('America/Denver', 1)" class="{{color[1]}}">MST</button>
+<button (click)="changeTZ('America/Chicago', 2)" class="{{color[2]}}">CST</button>
+<button (click)="changeTZ('America/New_York', 3)" class="{{color[3]}}">EST</button>
+<button (click)="changeTZ()">Clear</button>
+<br>
+
+
+<h2>{{ currentTime}}</h2>

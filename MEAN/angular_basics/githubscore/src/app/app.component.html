@@ -1,0 +1,22 @@
+<div id="wrapper">
+  <fieldset>
+  <div id="user">
+    <legend>GitHub Score</legend>
+    <form #formData="ngForm" (submit)="findUser(); formData.reset()" >
+      <h4>GitHub Username: <input type="text" name="user" required minlength="2" [(ngModel)]="username" #user="ngModel"></h4>
+      <button [disabled]="!user.valid" type="Submit">Calculate my Github Score</button>
+    </form>
+  </div>
+  <div id="score">
+    <h3>Your Score:</h3>
+    <h5>{{score}}</h5>
+    <div *ngIf="score && score.dirty">
+    <h6 *ngIf="score<20 && score<50" [ngStyle]="{'color':'red'}">Needs Work!</h6>
+    <h6 *ngIf="score<50 && score<100" [ngStyle]="{'color':'orange'}">A decent start!</h6>
+    <h6 *ngIf="score<100 && score<200" [ngStyle]="{'color':'black'}">Doing good!</h6>
+    <h6 *ngIf="score<200 && score>100" [ngStyle]="{'color':'green'}">Great job!</h6>
+    <h6 *ngIf="score>=200" [ngStyle]="{'color':'blue'}">Github Elite!</h6>
+    </div>
+  </div>  
+  </fieldset>
+</div>

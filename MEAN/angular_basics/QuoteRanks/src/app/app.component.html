@@ -1,0 +1,4 @@
+
+<app-create-quote [QuoteList]="QuoteList" (pushQuote)="addQuote($event)"></app-create-quote>
+<app-quote-list [QuoteList]="QuoteList" (quoteDelete)="deleteQuote($event)"></app-quote-list>
+

@@ -1,0 +1,9 @@
+<div>
+  <fieldset>
+    <legend>Super Saiyan 2</legend>
+      <h5>Power level: {{ power }}</h5>
+      <h4 *ngIf="power > 9000 && power <= 20000">Over 9000!</h4>
+      <h4 *ngIf="power > 20000 && power < 50000">Superlative!</h4>
+      <h4 *ngIf="power >= 50000">The One!</h4>
+  </fieldset>
+</div>

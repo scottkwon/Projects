@@ -1,0 +1,14 @@
+<div class="left">
+    <fieldset>
+      <legend>Power Levels</legend>
+      <h4>Initial Power Level: <input type="number" name="powerlevel" required min="1" max="100" [(ngModel)]="power">{{power}}</h4>
+
+
+      <app-human [power]="power"></app-human>
+      <app-saiyan [power]="power"></app-saiyan>
+      <app-ss [power]="power"></app-ss>  
+      <app-ss2 [power]="power"></app-ss2>
+      <app-ss3 [power]="power"></app-ss3>
+      <app-ss4 [power]="power"></app-ss4>
+    </fieldset>
+</div>

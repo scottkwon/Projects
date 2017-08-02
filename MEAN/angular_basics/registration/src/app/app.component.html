@@ -1,0 +1,106 @@
+<h1>{{title}}</h1>
+<br>
+<h4>Account Information:</h4>
+<h6><i>* fields are required!</i></h6>
+
+<div *ngIf="message" [ngStyle]="{'color':'green'}">
+  {{message}}
+</div>
+
+<form (submit)="register()" #formData="ngForm">
+
+  <p>*First Name: <input type="text" name="firstName"
+  required
+  minlength="4"
+  maxlength="24"
+  [(ngModel)]="user.firstName"
+  #firstName='ngModel'></p>
+  <div *ngIf="firstName.errors && (firstName.touched || firstName.dirty)">
+   <span *ngIf="firstName.errors" [ngStyle]="{'color':'red'}" >{{firstName.errors | json}}</span> 
+  </div>
+
+  <p>*Last Name: <input type="text" name="lastName"
+  required
+  minlength="4"
+  maxlength="24"
+  [(ngModel)]="user.lastName"
+  #lastName='ngModel'></p>
+  <div *ngIf="lastName.errors && (lastName.touched || lastName.dirty)">
+   <span *ngIf="lastName.errors" [ngStyle]="{'color':'red'}" >{{lastName.errors | json}}</span> 
+  </div>
+
+  <p>*Email: <input type="email" name="email"
+  required
+  [(ngModel)]="user.email"
+  pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+  #email='ngModel'></p>
+  <div *ngIf="email.errors && (email.touched || email.dirty)">
+   <span *ngIf="email.errors" [ngStyle]="{'color':'red'}" >{{email.errors | json}}</span> 
+  </div>
+
+  <p>*Password: <input type="password" name="password"
+  required
+  [(ngModel)]="user.password"
+  minlength="8"
+  #password='ngModel'></p> 
+  <div *ngIf="password.errors && (password.touched || password.dirty)">
+   <span *ngIf="password.errors" [ngStyle]="{'color':'red'}" >{{password.errors | json}}</span> 
+  </div>
+
+  <p>*Password Confirmation: <input type="password" name="passwordConfirmation"
+  required
+  [(ngModel)]="user.passwordConfirmation"
+  minlength="8"
+  #passwordConfirmation='ngModel'>
+  <div *ngIf="user.password != user.passwordConfirmation && (passwordConfirmation.touched || passwordConfirmation.dirty)" [ngStyle]="{'color':'red'}"> <span>"Passwords do not match!"</span> 
+  </div>
+
+  <p>*Street Address: <input type="text" name="streetAddress"
+  required
+  [(ngModel)]="user.streetAddress"
+  #streetAddress='ngModel'></p>
+  <div *ngIf="streetAddress.errors && (streetAddress.touched || streetAddress.dirty)">
+   <span *ngIf="streetAddress.errors" [ngStyle]="{'color':'red'}" >{{streetAddress.errors | json}}</span> 
+  </div>
+
+  <p>Unit/Apt #: <input type="text" name="unit"
+  [(ngModel)]="user.unit"
+  #unit='ngModel'></p>
+  <div *ngIf="unit.errors && (unit.touched || unit.dirty)">
+   <span *ngIf="unit.errors" [ngStyle]="{'color':'red'}" >{{unit.errors | json}}</span> 
+  </div>
+
+  <p>*City: <input type="text" name="city"
+  required
+  [(ngModel)]="user.city"
+  #city='ngModel'></p> 
+  <div *ngIf="city.errors && (city.touched || city.dirty)">
+   <span *ngIf="city.errors" [ngStyle]="{'color':'red'}" >{{city.errors | json}}</span> 
+  </div>
+
+  <p>*State: <select name="state"
+  required
+  [(ngModel)]="user.state"
+  #state='ngModel'>
+    <option value="California">California</option>
+    <option value="Washington">Washington</option>
+  </select></p>
+  <div *ngIf="state.errors && (state.touched || state.dirty)">
+   <span *ngIf="state.errors" [ngStyle]="{'color':'red'}" >{{state.errors | json}}</span> 
+  </div>
+
+  <p>*Feeling Lucky?: <input type="radio" name="lucky" value="yes"
+  required
+  [(ngModel)]="user.lucky"
+  #lucky='ngModel'>Yes
+  <input type="radio" name="lucky" value="no"
+  required
+  [(ngModel)]="user.lucky"
+  #lucky='ngModel'>No
+  </p> 
+  <div *ngIf="lucky.errors && (lucky.touched || lucky.dirty)">
+   <span *ngIf="lucky.errors" [ngStyle]="{'color':'red'}" >{{lucky.errors | json}}</span> 
+  </div>
+
+  <p><input type="Submit" *ngIf="formData.valid" value="Register!"></p>
+</form>

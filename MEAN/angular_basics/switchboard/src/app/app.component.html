@@ -1,0 +1,4 @@
+<h1>{{ title }}</h1>
+
+
+<button *ngFor="let i of board; index as idx" [ngClass]="{'off': i=='off', 'on': i=='on' }" (click)=changeColor(idx)>{{i}}</button>

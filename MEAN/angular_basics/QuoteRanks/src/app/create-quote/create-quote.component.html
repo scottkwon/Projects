@@ -1,0 +1,13 @@
+<form (submit)="add(formData)" #formData="ngForm">
+  <h1>Add a Quote!</h1>
+  <textarea name="body" rows="4" cols="50" required minlength="2" [(ngModel)]="newQuote.Body" #body="ngModel"></textarea>
+    <span *ngIf="body.errors && body.dirty">
+      <p [ngStyle]="{'color':'red'}">Please enter a quote!</p>
+    </span>
+  
+  <p>Author: <input type="text" name="Author" required minlength="4" [(ngModel)]="newQuote.Author" #author="ngModel"></p>
+    <span *ngIf="author.errors && author.dirty">
+      <p [ngStyle]="{'color':'red'}">Please enter an author!</p>
+    </span> {{newQuote | json}}
+  <p><input *ngIf="formData.valid" type="Submit" value="Add New Quote!"></p>
+</form>

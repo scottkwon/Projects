@@ -1,0 +1,88 @@
+<div class="column">
+<fieldset>
+
+  
+<div *ngFor="let e of errors" [ngStyle]="{'color': 'red'}">
+<p>{{e}}</p>
+</div>
+
+
+<legend>Registration</legend>
+<h6><i>* fields are required!</i></h6>
+<form (submit)="register()" #formData="ngForm">
+
+  <p>*First Name: <input type="text" name="firstName"
+  required
+  minlength="4"
+  maxlength="24"
+  [(ngModel)]="regUser.firstName"
+  #firstName='ngModel'></p>
+  <div *ngIf="firstName.errors && (firstName.touched || firstName.dirty)">
+   <span *ngIf="firstName.errors" [ngStyle]="{'color':'red'}" >Field is required! First Name must be atleast 4 characters.</span> 
+  </div>
+
+  <p>*Last Name: <input type="text" name="lastName"
+  required
+  minlength="4"
+  maxlength="24"
+  [(ngModel)]="regUser.lastName"
+  #lastName='ngModel'></p>
+  <div *ngIf="lastName.errors && (lastName.touched || lastName.dirty)">
+   <span *ngIf="lastName.errors" [ngStyle]="{'color':'red'}" >Field is required! Last name must be atleast 4 characters</span> 
+  </div>
+
+  <p>*Email: <input type="email" name="email"
+  required
+  [(ngModel)]="regUser.email"
+  pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+  #email='ngModel'></p>
+  <div *ngIf="email.errors && (email.touched || email.dirty)">
+   <span *ngIf="email.errors" [ngStyle]="{'color':'red'}" >Email format is invalid</span> 
+  </div>
+
+  <p>*Password: <input type="password" name="password"
+  required
+  [(ngModel)]="regUser.password"
+  minlength="8"
+  #password='ngModel'></p> 
+  <div *ngIf="password.errors && (password.touched || password.dirty)">
+   <span *ngIf="password.errors" [ngStyle]="{'color':'red'}" >Password must be atleast 8 characters and have atleast: 1 uppercase and 1 special character!</span> 
+  </div>
+
+  <p>*Password Confirmation: <input type="password" name="passwordConfirmation"
+  required
+  [(ngModel)]="regUser.passwordConfirmation"
+  minlength="8"
+  #passwordConfirmation='ngModel'>
+  <div *ngIf="regUser.password != regUser.passwordConfirmation && (passwordConfirmation.touched || passwordConfirmation.dirty)" [ngStyle]="{'color':'red'}"> <span>"Passwords do not match!"</span> 
+  </div>
+
+  <p><input type="Submit" *ngIf="formData.valid" value="Register!"></p>
+</form>
+</fieldset>
+</div>
+
+<div class="column">
+  <fieldset>
+    <legend>Log-in!</legend>
+    <form #loginData="ngForm" (submit)="login()" >
+    <p>*Email: <input type="email" name="email"
+    required
+    [(ngModel)]="loginUser.email"
+    pattern='^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
+    #loginemail='ngModel'></p>
+    <div *ngIf="loginemail.errors && (loginemail.touched || loginemail.dirty)">
+    <span *ngIf="loginemail.errors" [ngStyle]="{'color':'red'}" >Email format invalid!</span> 
+    </div>
+      <p>*Password: <input type="password" name="password"
+    required
+    [(ngModel)]="loginUser.password"
+    minlength="8"
+    #loginpassword='ngModel'></p> 
+    <div *ngIf="loginpassword.errors && (loginpassword.touched || loginpassword.dirty)">
+    <span *ngIf="loginpassword.errors" [ngStyle]="{'color':'red'}" >Password must be atleast 8 characters and have atleast: 1 uppercase and 1 special character!</span> 
+    </div>
+    <p><input type="Submit" *ngIf="loginData.valid" value="Log-in!"></p>
+    </form>
+
+  </fieldset>

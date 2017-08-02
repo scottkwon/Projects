@@ -1,0 +1,12 @@
+<fieldset>
+  <h1>Product List</h1>
+  <div *ngFor="let product of products; index as idx"class="card">
+    <fieldset>
+      <h4>{{product.title}}</h4>
+      <h6>{{product.price | currency:"USD":true }}</h6>
+      <p *ngIf="product.url"><img src="{{product.url}}" alt=""></p>
+      <p><button id="edit"><a [routerLink]="['/edit',product.id]">Edit!</a></button></p>
+      <p><button id="delete" (click)="delete(idx)">Delete!</button></p>
+    </fieldset>
+  </div>
+</fieldset>
